@@ -8,8 +8,11 @@
     <string name="contrase_an">Contraseña</string>
     <string name="name">Name</string>
     <string name="jj">jj</string>
-    <string name="usuario">Usuario</string>
-    <string name="contrase_a">Contraseña</string>
+    <string name="usuario"> Usuario</string>
+    <string name="contrase_a"> Contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="nombre"> Nombre</string>
+    <string name="edad"> Edad</string>
+    <string name="registro">Registro</string>
 </resources>

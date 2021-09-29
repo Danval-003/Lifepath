@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lifepath.iml" filepath="$PROJECT_DIR$/.idea/modules/Lifepath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Volley/Lifepath.Volley.iml" filepath="$PROJECT_DIR$/.idea/modules/Volley/Lifepath.Volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Lifepath.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Lifepath.app.iml" />
     </modules>
   </component>

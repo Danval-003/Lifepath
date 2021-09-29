@@ -10,11 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aff1a41d-2e90-440c-9b13-6f0ffd56c701" name="Default Changelist" comment="ASAA">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/consumer-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/src/androidTest/java/com/example/volley/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Volley/src/test/java/com/example/volley/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registroOnline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registro.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +48,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1ynMplPhmLAoaVdpOzVoe67UcOE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,6 +74,9 @@
       <recent name="C:\Users\JulioValdez\Desktop\Lifepath2\app" />
     </key>
     <key name="android.template.-835103990">
+      <recent name="com.example.lifepath" />
+    </key>
+    <key name="android.template.-62085880">
       <recent name="com.example.lifepath" />
     </key>
   </component>

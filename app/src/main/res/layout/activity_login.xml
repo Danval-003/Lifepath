@@ -39,7 +39,7 @@
         tools:text="LifePath" />
 
     <EditText
-        android:id="@+id/Name"
+        android:id="@+id/user_login"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="350dp"
         android:layout_height="48dp"
@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.451" />
 
     <EditText
-        android:id="@+id/Contrase"
+        android:id="@+id/clave_login"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:background="#43EFC445"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.559" />
 
     <Button
-        android:id="@+id/registro"
+        android:id="@+id/loginBotton"
         android:layout_width="200dp"
         android:layout_height="54dp"
         android:background="#C1EF98"
@@ -85,11 +85,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name"
+        app:layout_constraintTop_toBottomOf="@+id/user_login"
         app:layout_constraintVertical_bias="0.498" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registrobotton"
         android:layout_width="179dp"
         android:layout_height="48dp"
         android:background="#D0EAF6"
@@ -97,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Contrase"
+        app:layout_constraintTop_toBottomOf="@+id/clave_login"
         app:layout_constraintVertical_bias="0.6" />
 
 </android.support.constraint.ConstraintLayout>

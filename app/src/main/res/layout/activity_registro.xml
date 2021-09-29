@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="83dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/hojas" />
+
+    <EditText
+        android:id="@+id/user_registro"
+        android:layout_width="321dp"
+        android:layout_height="53dp"
+        android:background="#75FFFBA8"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/edad_registro"
+        android:layout_width="321dp"
+        android:layout_height="53dp"
+        android:background="#75A8DCFF"
+        android:ems="10"
+        android:hint="@string/edad"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/name_registro"
+        android:layout_width="321dp"
+        android:layout_height="53dp"
+        android:background="#75FFA8A8"
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/clave_registro"
+        android:layout_width="321dp"
+        android:layout_height="53dp"
+        android:background="#75BBFFA8"
+        android:ems="10"
+        android:hint="@string/contrase_a"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/resgistrobott"
+        android:layout_width="179dp"
+        android:layout_height="48dp"
+        android:background="#D0EAF6"
+        android:text="@string/registrarse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <TextView
+        android:id="@+id/Registitulo"
+        android:layout_width="270dp"
+        android:layout_height="67dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/registro"
+        android:textSize="60sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/name_registro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
+
+</android.support.constraint.ConstraintLayout>
