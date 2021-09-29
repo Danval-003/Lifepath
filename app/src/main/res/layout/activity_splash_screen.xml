@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="341dp"
+        android:layout_height="103dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/lifepath"
+        android:textAllCaps="false"
+        android:textColor="#805B2C"
+        android:textSize="86sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631"
+        tools:text="LifePath" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="291dp"
+        android:layout_height="304dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        app:srcCompat="@drawable/hojas" />
+
+    <TextView
+        android:id="@+id/Anuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/todos_los_derechos_reservados_por_proyecto_discordia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+</android.support.constraint.ConstraintLayout>
