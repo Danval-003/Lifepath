@@ -2,9 +2,12 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SplashScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
 
     <TextView
         android:id="@+id/Titulo"
@@ -24,6 +27,18 @@
         app:layout_constraintVertical_bias="0.631"
         tools:text="LifePath" />
 
+    <TextView
+        android:id="@+id/Anuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/todos_los_derechos_reservados_por_proyecto_discordia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="291dp"
@@ -36,16 +51,16 @@
         app:layout_constraintVertical_bias="0.154"
         app:srcCompat="@drawable/hojas" />
 
-    <TextView
-        android:id="@+id/Anuncio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/todos_los_derechos_reservados_por_proyecto_discordia"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/Discordia"
+        android:layout_width="67dp"
+        android:layout_height="174dp"
+        android:contentDescription="@string/discordia"
+        app:layout_constraintBottom_toBottomOf="@+id/Anuncio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/discordia" />
 
 </android.support.constraint.ConstraintLayout>
