@@ -1,12 +1,21 @@
 package com.example.lifepath;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class registro extends AppCompatActivity {
 
@@ -26,6 +35,32 @@ public class registro extends AppCompatActivity {
                 String user= usuario.getText().toString();
                 String clave= contrasena.getText().toString();
                 int old= Integer.parseInt(edad.getText().toString());
+                Response.Listener<String> respuesta=new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try{
+                            JSONObject jsonRespuesta = new JSONObject(response);
+                            boolean ok= jsonRespuesta.getBoolean("success");
+                            if(ok==true){
+                                Intent i = new Intent(registro.this, Login.class);
+                                registro.this.startActivity(i);
+                                registro.this.finish();
+                            }
+                            else {
+                                AlertDialog.Builder alerta = new AlertDialog.Builder(registro.this);
+                                alerta.setMessage("Fallo en el registro")
+                                        .setNegativeButton("Reintentar", null)
+                                        .create()
+                                        .show();
+                            }
+                        }catch (JSONException e){
+                            e.getMessage();
+                        }
+                    }
+                };
+                registroOnline r= new registroOnline(name,user,clave,old,respuesta);
+                RequestQueue cola = Volley.newRequestQueue(registro.this);
+                cola.add(r);
 
 
             }

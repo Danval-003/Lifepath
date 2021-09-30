@@ -10,23 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aff1a41d-2e90-440c-9b13-6f0ffd56c701" name="Default Changelist" comment="ASAA">
-      <change afterPath="$PROJECT_DIR$/Volley/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/src/androidTest/java/com/example/volley/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Volley/src/test/java/com/example/volley/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registroOnline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/LoginOnline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/Vacio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vacio.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registroOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lifepath/registroOnline.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -74,6 +68,12 @@
       <recent name="C:\Users\JulioValdez\Desktop\Lifepath2\app" />
     </key>
     <key name="android.template.-835103990">
+      <recent name="com.example.lifepath" />
+    </key>
+    <key name="android.template.1642293641">
+      <recent name="com.example.lifepath" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.lifepath" />
     </key>
     <key name="android.template.-62085880">
