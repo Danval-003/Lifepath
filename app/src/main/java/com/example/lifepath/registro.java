@@ -28,42 +28,43 @@ public class registro extends AppCompatActivity {
         TextView contrasena = (EditText) findViewById(R.id.clave_registro);
         TextView edad = (EditText) findViewById(R.id.edad_registro);
         Button btnResgistro = (Button) findViewById(R.id.resgistrobott);
-        btnResgistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name= nombre.getText().toString();
-                String user= usuario.getText().toString();
-                String clave= contrasena.getText().toString();
-                int old= Integer.parseInt(edad.getText().toString());
-                Response.Listener<String> respuesta=new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try{
-                            JSONObject jsonRespuesta = new JSONObject(response);
-                            boolean ok= jsonRespuesta.getBoolean("success");
-                            if(ok==true){
-                                Intent i = new Intent(registro.this, Login.class);
-                                registro.this.startActivity(i);
-                                registro.this.finish();
-                            }
-                            else {
-                                AlertDialog.Builder alerta = new AlertDialog.Builder(registro.this);
-                                alerta.setMessage("Fallo en el registro")
-                                        .setNegativeButton("Reintentar", null)
-                                        .create()
-                                        .show();
-                            }
-                        }catch (JSONException e){
-                            e.getMessage();
+        btnResgistro.setOnClickListener(view -> {
+            String name= nombre.getText().toString();
+            String user= usuario.getText().toString();
+            String clave= contrasena.getText().toString();
+            int old= Integer.parseInt(edad.getText().toString());
+            Response.Listener<String> respuesta=new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    System.out.println("pasotelo");
+                    System.out.println(response);
+                    try{
+                        JSONObject jsonRespuesta = new JSONObject(response);
+                        boolean ok= jsonRespuesta.getBoolean("success");
+
+                        if(ok){
+                            Intent i = new Intent(registro.this, Login.class);
+                            registro.this.startActivity(i);
+                            registro.this.finish();
                         }
+                        else {
+                            AlertDialog.Builder alerta = new AlertDialog.Builder(registro.this);
+                            alerta.setMessage("Fallo en el registro")
+                                    .setNegativeButton("Reintentar", null)
+                                    .create()
+                                    .show();
+                        }
+
+                    }catch (JSONException e){
+                        e.printStackTrace();
                     }
-                };
-                registroOnline r= new registroOnline(name,user,clave,old,respuesta);
-                RequestQueue cola = Volley.newRequestQueue(registro.this);
-                cola.add(r);
+                }
+            };
+            registroOnline r= new registroOnline(name,user,clave,old,respuesta);
+            RequestQueue cola = Volley.newRequestQueue(registro.this);
+            cola.add(r);
 
 
-            }
         });
 
     }

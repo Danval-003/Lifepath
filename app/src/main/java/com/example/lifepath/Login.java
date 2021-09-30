@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,37 +35,41 @@ public class Login extends AppCompatActivity {
                 finish();
             }
         });
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final String usuario=usuarioT.getText().toString();
-                final String clave=claveT.getText().toString();
-                Response.Listener<String> respuesta =new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try{
-                            JSONObject jsonRespuesta = new JSONObject(response);
-                            boolean ok= jsonRespuesta.getBoolean("success");
-                            if(ok==true){
-                                String nombre = jsonRespuesta.getString("nombre");
-                                int edad = jsonRespuesta.getInt("edad");
-                                Intent i = new Intent(Login.this, Vacio.class);
-                                Login.this.startActivity(i);
-                                Login.this.finish();
-                            }
-                            else {
-                                AlertDialog.Builder alerta = new AlertDialog.Builder(Login.this);
-                                alerta.setMessage("Fallo en el Login")
-                                        .setNegativeButton("Reintentar", null)
-                                        .create()
-                                        .show();
-                            }
-                        }catch (JSONException e){
-                            e.getMessage();
+        btnLogin.setOnClickListener(view -> {
+            final String usuario=usuarioT.getText().toString();
+            final String clave=claveT.getText().toString();
+            System.out.println("pasote");
+            Response.Listener<String> respuesta =new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    System.out.println("pasote0");
+                    System.out.println(response);
+                    try{
+                        JSONObject jsonRespuesta = new JSONObject(response);
+                        boolean ok= jsonRespuesta.getBoolean("success");
+                        if(ok==true){
+                            String nombre = jsonRespuesta.getString("nombre");
+                            int edad = jsonRespuesta.getInt("edad");
+                            Intent i = new Intent(Login.this, Vacio.class);
+                            Login.this.startActivity(i);
+                            Login.this.finish();
                         }
+                        else {
+                            AlertDialog.Builder alerta = new AlertDialog.Builder(Login.this);
+                            alerta.setMessage("Fallo en el Login")
+                                    .setNegativeButton("Reintentar", null)
+                                    .create()
+                                    .show();
+                        }
+                    }catch (JSONException e){
+                        e.getMessage();
+                        e.printStackTrace();
                     }
-                };
-            }
+                }
+            };
+            LoginOnline r= new LoginOnline(usuario,clave,respuesta);
+            RequestQueue cola = Volley.newRequestQueue(Login.this);
+            cola.add(r);
         });
     }
 }
