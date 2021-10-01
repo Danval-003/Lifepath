@@ -62,9 +62,9 @@ public class Vacio extends AppCompatActivity {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
                 //Mostrar la tostada
-                Toast.makeText(getApplicationContext()
+                /***Toast.makeText(getApplicationContext()
                         , "Seleccionaste " + item.getId()
-                        ,Toast.LENGTH_SHORT).show();
+                        ,Toast.LENGTH_SHORT).show();*/
             }
         });
 
@@ -72,9 +72,9 @@ public class Vacio extends AppCompatActivity {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
                 //Mostramos la tostada
-                Toast.makeText(getApplicationContext()
+                /***Toast.makeText(getApplicationContext()
                         , "Reseleccionaste " + item.getId()
-                        ,Toast.LENGTH_SHORT).show();
+                        ,Toast.LENGTH_SHORT).show();*/
             }
         });
     }
