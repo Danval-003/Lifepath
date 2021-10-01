@@ -1,21 +1,19 @@
 package com.example.lifepath;
 
-import android.app.Notification;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
-public class Vacio extends AppCompatActivity {
+public class Menu extends AppCompatActivity {
     //Instanciamos la variable
     MeowBottomNavigation bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vacio);
+        setContentView(R.layout.activity_menu);
 
         //Asignamos la variable
         bottomNavigation = findViewById(R.id.bottom_navigation);

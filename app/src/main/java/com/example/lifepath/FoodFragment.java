@@ -10,6 +10,7 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  * Use the {@link FoodFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
 public class FoodFragment extends Fragment {
 
@@ -21,10 +22,6 @@ public class FoodFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    public FoodFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -42,6 +39,10 @@ public class FoodFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public FoodFragment() {
+        // Required empty public constructor
     }
 
     @Override

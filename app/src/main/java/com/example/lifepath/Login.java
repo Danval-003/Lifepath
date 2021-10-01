@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity {
                         if(ok==true){
                             String nombre = jsonRespuesta.getString("nombre");
                             int edad = jsonRespuesta.getInt("edad");
-                            Intent i = new Intent(Login.this, Vacio.class);
+                            Intent i = new Intent(Login.this, Menu.class);
                             Login.this.startActivity(i);
                             Login.this.finish();
                         }
