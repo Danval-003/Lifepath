@@ -13,7 +13,8 @@
         android:theme="@style/Theme.Lifepath" >
         <activity
             android:name=".Vacio"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".registro"
             android:exported="true"
