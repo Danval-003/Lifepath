@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FoodFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Escanear"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_above="@id/contenedor_lineal"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Busca una etiqueta para escanear!"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/contenedor_lineal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/boton_captura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:text="Capturar"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/boton_copiar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Copiar el texto" />
+    </LinearLayout>
+</RelativeLayout>

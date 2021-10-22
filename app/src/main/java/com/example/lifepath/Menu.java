@@ -1,7 +1,8 @@
 package com.example.lifepath;
 
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -27,12 +28,12 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
                 //Instanciamos los fragmentos.
-                Fragment fragment = null;
+               Fragment fragment = null;
                 //Verificamos las condiciones
                 switch (item.getId()){
                     case 1:
                         //Cuando el id es 1
-                        //Instanciamos el fragmento que muestra el perfil.
+                        //Instanciamos el fragmento que muestra el perfil
                         fragment = new ProfileFragment();
                         break;
                     case 2:
