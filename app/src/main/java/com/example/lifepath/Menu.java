@@ -1,9 +1,9 @@
 package com.example.lifepath;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
@@ -18,6 +18,7 @@ public class Menu extends AppCompatActivity {
 
         //Asignamos la variable
         bottomNavigation = findViewById(R.id.bottom_navigation);
+
 
         //Añadimos los items al menú
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_profile));
@@ -76,6 +77,7 @@ public class Menu extends AppCompatActivity {
                         ,Toast.LENGTH_SHORT).show();*/
             }
         });
+
     }
 
     private void loadFragment(Fragment fragment) {

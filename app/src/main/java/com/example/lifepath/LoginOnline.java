@@ -17,7 +17,6 @@ public class LoginOnline extends StringRequest {
         parametros.put("usuario", usuario+"");
         parametros.put("clave", clave+"");
     }
-
     protected Map<String, String> getParams() {
         return parametros;
     }

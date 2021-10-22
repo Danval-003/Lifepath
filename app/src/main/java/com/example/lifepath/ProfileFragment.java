@@ -1,11 +1,13 @@
 package com.example.lifepath;
 
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,10 +50,18 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        TextView iam = getView().findViewById(R.id.iam);
+        TextView sas = getView().findViewById(R.id.Sas);
+        Intent i = this.getActivity().getIntent();
+        String nombre = i.getStringExtra("nombre");
+        int edad = i.getIntExtra("edad", -1);
+        iam.setText("Usuario: "+iam);
+        sas.setText("Edad: "+sas);
     }
 
     @Override
