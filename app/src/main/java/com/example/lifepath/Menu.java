@@ -30,7 +30,8 @@ public class Menu extends AppCompatActivity {
 
         //Asignamos la variable
         bottomNavigation = findViewById(R.id.bottom_navigation);
-        
+
+
         //Añadimos los items al menú
         bottomNavigation.add(new MeowBottomNavigation.Model(1, R.drawable.ic_profile));
         bottomNavigation.add(new MeowBottomNavigation.Model(2, R.drawable.ic_food));
@@ -40,14 +41,13 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
                 //Instanciamos los fragmentos.
-                Fragment fragment = null;
-                Intent i = getIntent();
+               Fragment fragment = null;
                 //Verificamos las condiciones
                 switch (item.getId()){
                     case 1:
                         //Cuando el id es 1
                         //Instanciamos el fragmento que muestra el perfil
-                        fragment = new ProfileFragment(i.getStringExtra("nombre"),i.getStringExtra("edad") );
+                        fragment = new ProfileFragment();
                         break;
                     case 2:
                         //Cuando el id es 2
@@ -75,8 +75,8 @@ public class Menu extends AppCompatActivity {
             public void onClickItem(MeowBottomNavigation.Model item) {
                 //Mostrar la tostada
                 /***Toast.makeText(getApplicationContext()
-                 , "Seleccionaste " + item.getId()
-                 ,Toast.LENGTH_SHORT).show();*/
+                        , "Seleccionaste " + item.getId()
+                        ,Toast.LENGTH_SHORT).show();*/
             }
         });
 
@@ -85,8 +85,8 @@ public class Menu extends AppCompatActivity {
             public void onClickItem(MeowBottomNavigation.Model item) {
                 //Mostramos la tostada
                 /***Toast.makeText(getApplicationContext()
-                 , "Reseleccionaste " + item.getId()
-                 ,Toast.LENGTH_SHORT).show();*/
+                        , "Reseleccionaste " + item.getId()
+                        ,Toast.LENGTH_SHORT).show();*/
             }
         });
 
@@ -110,7 +110,7 @@ public class Menu extends AppCompatActivity {
                 Uri resultUri = result.getUri();
                 try {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), resultUri);
-                    FoodFragment f = new FoodFragment();
+                    FoodFragment3 f = new FoodFragment3();
                     f.getTextFromImage(bitmap);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -120,26 +120,26 @@ public class Menu extends AppCompatActivity {
     }
 
     /**
-     private void getTextFromImage(Bitmap bitmap){
-     TextRecognizer recognizer = new TextRecognizer.Builder(this).build();
-     if (!recognizer.isOperational()){
-     Toast.makeText(Menu.this,"Un error ocurrió!", Toast.LENGTH_SHORT).show();
-     }
-     else {
-     Frame frame = new Frame.Builder().setBitmap(bitmap).build();
-     SparseArray<TextBlock> textBlockSparseArray = recognizer.detect(frame);
-     StringBuilder stringBuilder = new StringBuilder();
-     for (int i = 0; i < textBlockSparseArray.size(); i++) {
-     TextBlock textBlock = textBlockSparseArray.valueAt(i);
-     stringBuilder.append(textBlock.getValue());
-     stringBuilder.append("\n");
-     }
-     }
-     visualizadorTexto.setText(stringBuilder.toString());
-     botonCapturar.setText("Intentar nuevamente");
-     butonCopiar.setVisibility(View.VISIBLE);
-     }
-     }*/
+    private void getTextFromImage(Bitmap bitmap){
+        TextRecognizer recognizer = new TextRecognizer.Builder(this).build();
+        if (!recognizer.isOperational()){
+            Toast.makeText(Menu.this,"Un error ocurrió!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Frame frame = new Frame.Builder().setBitmap(bitmap).build();
+            SparseArray<TextBlock> textBlockSparseArray = recognizer.detect(frame);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < textBlockSparseArray.size(); i++) {
+                TextBlock textBlock = textBlockSparseArray.valueAt(i);
+                stringBuilder.append(textBlock.getValue());
+                stringBuilder.append("\n");
+            }
+        }
+        visualizadorTexto.setText(stringBuilder.toString());
+        botonCapturar.setText("Intentar nuevamente");
+        butonCopiar.setVisibility(View.VISIBLE);
+        }
+    }*/
 
 
     public void copiadoalPortapapeles(String text){
