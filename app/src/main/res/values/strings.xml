@@ -22,4 +22,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="copiar_el_texto">Copiar el texto</string>
+    <string name="capturar">Capturar</string>
+    <string name="copiar_el_texto">Copiar el texto</string>
+    <string name="busca_una_etiqueta_para_escanear">Busca una etiqueta para escanear!</string>
 </resources>

@@ -18,9 +18,9 @@
         <TextView
             android:id="@+id/text_data"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Busca una etiqueta para escanear!"
+            android:text="@string/busca_una_etiqueta_para_escanear"
             android:textSize="24sp"
             android:textStyle="bold"/>
     </ScrollView>
@@ -30,14 +30,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
+
         <Button
             android:id="@+id/boton_captura"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:baselineAligned="false"
-            android:text="Capturar"
+            android:text="@string/capturar"
+            android:textColor="#00796B"
             android:visibility="visible"
             tools:visibility="visible" />
 
@@ -48,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Copiar el texto" />
+            android:text="@string/copiar_el_texto"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 </RelativeLayout>

@@ -42,12 +42,13 @@ public class Menu extends AppCompatActivity {
             public void onShowItem(MeowBottomNavigation.Model item) {
                 //Instanciamos los fragmentos.
                Fragment fragment = null;
+               Intent i = getIntent();
                 //Verificamos las condiciones
                 switch (item.getId()){
                     case 1:
                         //Cuando el id es 1
                         //Instanciamos el fragmento que muestra el perfil
-                        fragment = new ProfileFragment();
+                        fragment = new ProfileFragment(i.getStringExtra("nombre"), i.getStringExtra("edad"));
                         break;
                     case 2:
                         //Cuando el id es 2
@@ -110,7 +111,7 @@ public class Menu extends AppCompatActivity {
                 Uri resultUri = result.getUri();
                 try {
                     bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), resultUri);
-                    FoodFragment3 f = new FoodFragment3();
+                    FoodFragment f = new FoodFragment();
                     f.getTextFromImage(bitmap);
                 } catch (IOException e) {
                     e.printStackTrace();

@@ -24,7 +24,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FoodFragment3#newInstance} factory method to
+ * Use the {@link FoodFragment#newInstance} factory method to
  * create an instance of this fragment.
  *
  */
@@ -120,8 +120,8 @@ public class FoodFragment extends Fragment {
      * @return A new instance of fragment FoodFragment3.
      */
     // TODO: Rename and change types and number of parameters
-    public static FoodFragment3 newInstance(String param1, String param2) {
-        FoodFragment3 fragment = new FoodFragment3();
+    public static FoodFragment newInstance(String param1, String param2) {
+        FoodFragment fragment = new FoodFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
