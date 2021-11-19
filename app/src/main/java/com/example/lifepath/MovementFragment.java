@@ -63,7 +63,8 @@ public class MovementFragment extends Fragment {
          View j= inflater.inflate(R.layout.fragment_movement, container, false);
         Button s = (Button) j.findViewById(R.id.rut);
         s.setOnClickListener(view -> {
-            Intent o= new Intent(MovementFragment.this.getActivity(), Rutinas.class);
+            Intent o= new Intent(getActivity(), Rutinas.class);
+            getActivity().startActivity(o);
 
         });
          return j;
