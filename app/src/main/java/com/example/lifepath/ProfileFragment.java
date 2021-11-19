@@ -1,6 +1,5 @@
 package com.example.lifepath;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
@@ -24,22 +22,30 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private String nombre;
+    private String edad;
+    private static String name;
+    private static String eda;
 
-    public ProfileFragment() {
+    public ProfileFragment( String mParam1, String mParam2) {
+        this.nombre=mParam1;
+        this.edad=mParam2;
+        eda=edad;
+        name=nombre;
         // Required empty public constructor
     }
-
+    // TODO: Rename and change types and number of parameters
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
+     * @return A new instance of fragment MovementFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
+        ProfileFragment fragment = new ProfileFragment(name, eda);
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -55,19 +61,20 @@ public class ProfileFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        TextView iam = getView().findViewById(R.id.iam);
-        TextView sas = getView().findViewById(R.id.Sas);
-        Intent i = this.getActivity().getIntent();
-        String nombre = i.getStringExtra("nombre");
-        int edad = i.getIntExtra("edad", -1);
-        iam.setText("Usuario: "+iam);
-        sas.setText("Edad: "+sas);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View myInflatedView = inflater.inflate(R.layout.fragment_profile, container,false);
+
+        TextView g = (TextView) myInflatedView.findViewById(R.id.iam);
+        TextView s = (TextView) myInflatedView.findViewById(R.id.Sas);
+        g.setText("Usuario: "+nombre);
+        s.setText("Edad: "+edad);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return myInflatedView;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.lifepath;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class Menu extends AppCompatActivity {
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
+                Intent i = getIntent();
+
                 //Instanciamos los fragmentos.
                Fragment fragment = null;
                 //Verificamos las condiciones
@@ -35,7 +38,7 @@ public class Menu extends AppCompatActivity {
                     case 1:
                         //Cuando el id es 1
                         //Instanciamos el fragmento que muestra el perfil
-                        fragment = new ProfileFragment();
+                        fragment = new ProfileFragment(i.getStringExtra("nombre"), i.getStringExtra("edad"));
                         break;
                     case 2:
                         //Cuando el id es 2

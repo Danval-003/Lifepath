@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
                             int edad = jsonRespuesta.getInt("edad");
                             Intent i = new Intent(Login.this, Menu.class);
                             i.putExtra("nombre", nombre);
-                            i.putExtra("edad", edad);
+                            i.putExtra("edad", edad+"");
                             Login.this.startActivity(i);
                             Login.this.finish();
                         }
